@@ -2,15 +2,9 @@
 
 ## Your Task
 
-TypeScript can enhance the overall development experience with React, leading to more reliable, maintainable, and scalable applications.
-
-Your challenge is to complete a candidate search application that calls the GitHub API and renders data in the browser.
-
 The application’s API, retrieves data from the GitHub API, has already been created. It's your job to complete the front end using TypeScript, call the application's API, and then deploy the entire application to Render.
 
 * For more information on the data returned by the GitHub API, refer to the [GitHub Documentation on REST API Endpoints for Users](https://docs.github.com/en/rest/users/users).
-
-> **important** You'll need to create a [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token) to increase the API rate limit.
 
 ## User Story
 
@@ -51,22 +45,6 @@ The following images show the web application's appearance and functionality:
 ![The potential candidates page displays a list of potential candidates and allows the user to reject a candidate.](./Assets/13-02-candidate_search_potential_candidates.png)
 
 ## Getting Started
-
-* For this app to run, you'll need to create a GitHub Personal Access Token. Follow the instructions on [creating a fine-grained personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token), with the following caveats:
-
-  * When creating your fine-grained token, leave all the default permissions. We don't need to add any additional privileges to this token, since we're only using it to search public profiles.
-
-  * Once your token is generated, add it to a `.env` file in the `environment` folder as `VITE_GITHUB_TOKEN`. The included `.env.EXAMPLE` file can be used as an example.
-
-  * You will NOT be able to view your token after you create it. If you forget to copy it over right away, you'll need to create a new token. 
-
-The starter code provides:
-
-* The application folder structure and scaffolding
-
-* Code to retrieve data from the GitHub API
-
-  * `./Develop/src/api/API.tsx`
 
 You will need to:
 
