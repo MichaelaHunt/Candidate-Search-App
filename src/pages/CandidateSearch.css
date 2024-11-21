@@ -55,6 +55,9 @@ img {
     justify-content: center;
     margin-top: 16px;
     color: black;
+}
+
+.circle:focus {
     outline: none;
     border: none;
 }

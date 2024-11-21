@@ -43,10 +43,10 @@ async function nextCandidate() {
           <img src={candidate.avatar_url ? candidate.avatar_url : ""}></img>
           <div className="textBox">
             <h2>{candidate.name} ({candidate.login})</h2>
-            <h4>Location: {candidate.location ? candidate.location : "Not found."}</h4>
-            <h4>Email: {candidate.email ? candidate.email : "Not found."}</h4>
-            <h4>Company: {candidate.company ? candidate.company : "Not found."}</h4>
-            <h4>Bio: {candidate.bio ? candidate.bio : "Not found."}</h4>
+            <h4>Location: {candidate.location ? candidate.location : "Info not found."}</h4>
+            <h4>Email: {candidate.email ? candidate.email : "Info not found."}</h4>
+            <h4>Company: {candidate.company ? candidate.company : "Info not found."}</h4>
+            <h4>Bio: {candidate.bio ? candidate.bio : "Info not found."}</h4>
           </div>
         </div>
         <div className="buttons">
