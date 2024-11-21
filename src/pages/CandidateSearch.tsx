@@ -18,21 +18,22 @@ const [candidate, setCandidate] = useState<Candidate>({
 
 
 async function nextCandidate() {
-  //searchGithub
-  //then searchGithubUser (to get the full info)
-  //destructure into Candidate obj
   const data: any = await searchGithub();
-  // console.log("Data: " + JSON.stringify(data));
   const finalData: any = await searchGithubUser(data[0].login);
-  console.log("FinalData: " + JSON.stringify(finalData));
   const myCandidate: Candidate = finalData;
-  console.log("Candidate: " + JSON.stringify(myCandidate));
+
   setCandidate(myCandidate);
 }
 
-// function saveCandidate() {
-//   //save the candidate to local storage
-// }
+function saveCandidate() {
+  let storage = (localStorage.getItem('candidateList'));
+  if (storage) {
+    let myArray = JSON.parse(storage);
+    localStorage.setItem('candidateList', JSON.stringify([...myArray, candidate]));
+  } else {
+    localStorage.setItem('candidateList', JSON.stringify([candidate]));
+  }
+}
 
   return (
     <>
@@ -53,7 +54,7 @@ async function nextCandidate() {
             <button className="circle red" onClick={nextCandidate}>
               <p>-</p>
             </button>
-            <button className="circle green">
+            <button className="circle green" onClick={saveCandidate}>
               <p>+</p>
             </button>
         </div>
