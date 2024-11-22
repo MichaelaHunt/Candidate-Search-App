@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./SavedCandidates.css";
 
 const SavedCandidates = () => {
-  let [candidates] = useState<Candidate[]>(getStorage);
+  let [candidates, setCandidates] = useState<Candidate[]>(getStorage);
 
   function getStorage(): Candidate[] {
     const data = localStorage.getItem('candidateList');
@@ -10,10 +10,18 @@ const SavedCandidates = () => {
     return storage;
   }
 
+  function removeItem(item: Candidate) {
+    let storage = getStorage();
+    let index = storage.findIndex((candidate) => candidate.html_url === item.html_url);
+    storage.splice(index, 1);
+    setCandidates(storage);
+    localStorage.setItem('candidateList', JSON.stringify(storage));
+  }
+
   return (
     <>
       <h1>Potential Candidates</h1>
-      {candidates && (
+      {candidates && candidates.length > 0 ? (
         <table>
           <thead>
             <tr>
@@ -25,22 +33,25 @@ const SavedCandidates = () => {
               <th>Bio</th>
               <th>Reject</th>
             </tr>
-            {candidates.map((item) => (
-              <tr key={item.html_url}>
+          </thead>
+          {candidates.map((item) => (
+            <tbody key={item.html_url}>
+              <tr>
                 <td><img src={item.avatar_url ? item.avatar_url : "Not found."}></img></td>
-                <td>{item.name} ({item.login})</td>
+                <td>{item.name} (<a href={item.html_url!}>{item.login}</a>)</td>
                 <td>{item.location ? item.location : "Not found."}</td>
                 <td>{item.email ? item.email : "Not found."}</td>
                 <td>{item.company ? item.company : "Not found."}</td>
                 <td>{item.bio ? item.bio : "Not found."}</td>
-                <td><button>-</button></td>
+                <td><button onClick={() => removeItem(item)}>-</button></td>
               </tr>
-            ))}
-          </thead>
-          <tbody>
-            {/* You can render table rows here */}
-          </tbody>
+            </tbody>
+          ))}
         </table>
+      ) : (
+        <div>
+          <h2>No more items to display. Visit the home page!</h2>
+        </div>
       )}
     </>
   );
