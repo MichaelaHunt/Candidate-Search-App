@@ -1,170 +1,53 @@
-# Module 13 Challenge: Candidate Search
+# Candidate Search App
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Your Task
+  ## Description
 
-The application’s API, retrieves data from the GitHub API, has already been created. It's your job to complete the front end using TypeScript, call the application's API, and then deploy the entire application to Render.
+  This webapp allows the user to browse for potential candidates on GitHub with a fresh and simple UI by using GitHub's API.
 
-* For more information on the data returned by the GitHub API, refer to the [GitHub Documentation on REST API Endpoints for Users](https://docs.github.com/en/rest/users/users).
+  ## Table of Contents
 
-## User Story
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)  
+  - [License](#license)
+  - [Features](#features)
+  - [Tests](#tests)
 
-```md
-AS AN employer
-I WANT a candidate search application
-SO THAT I can hire the best candidates
-```
+  ## Installation
 
-## Acceptance Criteria
+  If you would prefer to download the files rather than visit the deployed site, you may run the program by opening the terminal and running "npm i", then "npm run build" and finally, you can run the program with "npm run start"!
 
-```md
-GIVEN a candidate search application
-WHEN the candidate search page loads
-THEN the information for one candidate should be displayed, including the candidate's name, username, location, avatar, email, html_url, and company
-WHEN I click the "+" button
-THEN the candidate should be saved to the list of potential candidates and the next candidate's information should be displayed
-WHEN I click the "-" button
-THEN the next candidate's information should be displayed without saving the current candidate
-WHEN there are no candidates available to review
-THEN an appropriate message should be shown indicating no more candidates are available
-WHEN the potential candidates page loads
-THEN the user should see a list of previously saved potential candidates with their name, username, location, avatar, email, html_url, and company
-WHEN the page reloads
-THEN the list of potential candidates should persist and be available for viewing
-WHEN there are no potential candidates
-THEN an appropriate message should be displayed indicating no candidates have been accepted
-WHEN I click the "-" button
-THEN the next candidate's information should be displayed without saving the current candidate
-```
+  ## Usage
 
-## Mock-Up
+  You can access the live website at: <br><br>
+  If you choose to run the site locally, run "npm run start" from the terminal after following the installation instructions.
 
-The following images show the web application's appearance and functionality:
+  ## Credits
 
-![The candidate search page displays a candidate's information and allows the user to accept or reject the candidate and view a list of potential candidates.](./Assets/13-01-candidate_search_homepage.png)
+  - ChatGPT (line is credited with a comment)
+  - React.js (node package)
+  - Typescript (node package)
+  - Vite (node package)
+  - [GitHub's API](https://docs.github.com/en/rest?apiVersion=2022-11-28)
 
-![The potential candidates page displays a list of potential candidates and allows the user to reject a candidate.](./Assets/13-02-candidate_search_potential_candidates.png)
+  ## License
 
-## Getting Started
+  This project is protected under the MIT license.
 
-You will need to:
+  ### Features
 
-* Create a `.env` file with your GitHub API token
+  - **View GitHub Member Details**: Quickly access detailed information about any GitHub member.  
+  - **Save Members**: Add members to a personalized list for easy reference.  
+  - **Manage Saved Members**: View or remove members from your saved list.  
+  - **Direct GitHub Navigation**: Access a saved member's GitHub profile with a single click.  
 
-* Complete code for the `CandidateSearch` and `SavedCandidates` pages
 
-* Create any necessary components
+  ## Tests  
 
-* Use local storage
+  To begin testing, use the following command: npm run start
 
-Refer to the [GitHub Documentation on Authenticating to the REST API](https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api?apiVersion=2022-11-28#authenticating-with-a-personal-access-token) for information about creating your personal access token.
+  ## Still have questions? 
 
-Refer to the [Full-Stack Blog on deploying to Render](https://coding-boot-camp.github.io/full-stack/render/render-deployment-guide) and the [Render documentation on setting environment variables](https://docs.render.com/configure-environment-variables).
-
-## Bonus
-
-As a bonus, try to add the ability to sort and filter the list of potential candidates.
-
-## Grading Requirements
-
-> **note** If a Challenge assignment submission is marked as “0”, it is considered incomplete and won't count toward your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 40%
-
-* Application uses the GitHub API to retrieve user data
-
-* Application uses an interface to type user data
-
-* Application stores potential candidates in localStorage
-
-* Application is deployed to Render
-
-### Deployment: 32%
-
-* Application is deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL has been submitted
-
-* GitHub repository contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains a quality README file with a description, screenshot, and link to the deployed application
-
-### Bonus: +10 Points
-
-Fulfilling the following can add up to 10 points to your grade (note that the highest grade you can achieve is still 100):
-
-* Application allows sorting and filtering of potential candidates
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application
-
-* The URL of the GitHub repository (the repository should have a unique name and include a README describing the project)
-
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
-
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md), which uses [Babel](https://babeljs.io/) for Fast Refresh
-* [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc), which uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you're developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-* Configure the top-level `parserOptions` property as follows:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-* Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
-* Optionally, add `plugin:@typescript-eslint/stylistic-type-checked`.
-* Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` and `plugin:react/jsx-runtime` to the `extends` list.
-
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+  My profile: https://github.com/MichaelaHunt  
+  Please direct any questions to micapplehunt@gmail.com!
