@@ -50,7 +50,7 @@ const SavedCandidates = () => {
         </table>
       ) : (
         <div>
-          <h2>No more items to display. Visit the home page!</h2>
+          <h2>No candidates to display. Visit the home page!</h2>
         </div>
       )}
     </>
