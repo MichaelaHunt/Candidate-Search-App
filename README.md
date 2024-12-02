@@ -20,7 +20,7 @@
 
   ## Usage
 
-  You can access the live website at: <br><br>
+  You can access the live website at: [this link](https://candidate-search-app-wtfj.onrender.com)<br><br>
   If you choose to run the site locally, run "npm run start" from the terminal after following the installation instructions.
 
   ## Credits
@@ -41,7 +41,6 @@
   - **Save Members**: Add members to a personalized list for easy reference.  
   - **Manage Saved Members**: View or remove members from your saved list.  
   - **Direct GitHub Navigation**: Access a saved member's GitHub profile with a single click.  
-
 
   ## Tests  
 
