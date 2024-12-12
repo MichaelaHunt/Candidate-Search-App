@@ -20,7 +20,7 @@
 
   ## Usage
 
-  You can access the live website at: [this link](https://candidate-search-app-wtfj.onrender.com)<br><br>
+  You can access the live website at: [this link](https://mellifluous-bonbon-3a0439.netlify.app/)<br><br>
   If you choose to run the site locally, run "npm run start" from the terminal after following the installation instructions.
 
   ## Credits
